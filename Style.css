@@ -1,0 +1,124 @@
+html, body{
+    height: 100%;
+    margin: 0px;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    align-content: top, center;
+    
+}
+h1{
+    font-size: 22px;
+    color: rgb(58, 55, 55);
+}
+h2{
+    font-size: 20px;
+}
+p, li{
+    font-size: 16px;
+}
+.sidebar {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2);
+    background-color: rgb(82,191,196,0.5);
+}
+.maindiv{
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+}
+.vers{
+    justify-content: center;
+    touch-action: manipulation;
+    align-items: center;
+    gap: 10px;
+    padding: 40px;
+    display: flex;
+    flex: 1;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    min-width:fit-content;
+    max-width: fit-content;
+    white-space: nowrap;
+    cursor:pointer;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+.vers h2,
+.vers p{
+    text-align: center;
+}
+.vers.active{
+    background-color: rgb(82,191,196,0.3);
+    transform: scale(1.05);
+    z-index: 2;
+}
+.vers:hover{
+    background-color:  rgb(82,191,196,0.3);
+    transform: scale(1.02);
+}
+.contdiv{
+    justify-self: center;
+    width: 90vh;
+}
+.img{
+    width: 120px;
+    height: 120px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;   
+}
+@media screen and (max-width: 768px) {
+    .sidebar {
+        padding: 10px;
+    }
+
+    .maindiv{
+        flex-direction: row;
+        overflow-x: auto;
+        align-items: center;
+        scroll-snap-type: x mandatory;
+        padding: 0 10px;
+    }
+
+    .vers{
+        margin: 5px auto;
+        width: 80%;
+        max-width: 350px;
+        flex-direction: column;
+        text-align: center;
+        white-space: normal;
+        padding: 0%;
+        scroll-snap-align: center;
+        min-width: 65%;
+        height: max-content;
+
+    }
+    .vers p{
+        font-size: 18px;
+    }
+
+    .img{
+        margin-top: 5px;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    p, li{
+        font-size: 12px;
+    }
+
+    .contdiv{
+        width: 90%;
+    }
+
+    iframe{
+        border: none;
+        height: 700px;
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+}
